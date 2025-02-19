@@ -1,8 +1,10 @@
 name: run main.py
 
 on:
+  workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: '0 0 * * 1' # At 00:00 on Monday
+    - cron: '0 */2 * * *' # Runs every 2 hours
+
 
 jobs:
   build:
